@@ -19,9 +19,8 @@ import myImg3 from '../../assets/images/CarRental.jpg';
 import myImg4 from '../../assets/images/inwood.jpg';
 import '../../components/TextAnimation/animationtext.scss';
 import '../../components/TextAnimation/text.js';
-import "./portfolio.scss"
+import './portfolio.scss';
 export const Portfolio = () => {
- 
 	return (
 		<TextAnimationBox className=' text-white'>
 			<TextAnimationHtml>
@@ -63,56 +62,92 @@ export const Portfolio = () => {
 					<PortfolioBox>
 						<CardBox>
 							<Card className='card_portfolio'>
-								<CardImg  src={myImg} alt="card-img" />
-                <div className='active_div' id='active_card'> </div>
+								<CardImg src={myImg} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
 								<CardText className='card_content'>
 									<CardTitle>Food</CardTitle>
-									<CardPr> React, Styled component, Bootstarpt ,  </CardPr>
-                
-									<Cardbtn className='btn-view' id='btn_view'  >
-                  <a href="https://food-app07.netlify.app/" target="_blank" rel="noopener noreferrer" className='link_portfolio'>View</a>
-                  
-                  </Cardbtn>
+									<CardPr> React, Styled component, Bootstarpt , </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://food-app07.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
 								</CardText>
 							</Card>
-              <Card className='card_portfolio'>
-								<CardImg  src={myImg2} alt="card-img" />
-                <div className='active_div' id='active_card'> </div>
-								<CardText className='card_content'>
-									<CardTitle>Scoot</CardTitle>
-									<CardPr> Html, Scss, Bootstarpt   </CardPr>
-                
-									<Cardbtn className='btn-view' id='btn_view'  >
-                  <a href="https://scoot-mk-02.netlify.app/" target="_blank" rel="noopener noreferrer" className='link_portfolio'>View</a>
-                  
-                  </Cardbtn>
-								</CardText>
-							</Card>
-              <Card className='card_portfolio'>
-								<CardImg  src={myImg4} alt="card-img" />
-                <div className='active_div' id='active_card'> </div>
+
+							<Card className='card_portfolio'>
+								<CardImg src={myImg4} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
 								<CardText className='card_content'>
 									<CardTitle>Inwood</CardTitle>
-									<CardPr> Html, Scss, Javascript , Slick Js  </CardPr>
-                
-									<Cardbtn className='btn-view' id='btn_view'  >
-                  <a href="https://inwood-mk.netlify.app/" target="_blank" rel="noopener noreferrer" className='link_portfolio'>View</a>
-                  
-                  </Cardbtn>
+									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://inwood-mk.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
 								</CardText>
 							</Card>
-              <Card className='card_portfolio'>
-								<CardImg  src={myImg3} alt="card-img" />
-                <div className='active_div' id='active_card'> </div>
+							<Card className='card_portfolio'>
+								<CardImg src={myImg3} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
 								<CardText className='card_content'>
 									<CardTitle>CarRental</CardTitle>
-                  <CardPr>It was prepared in 12 hours in the competition held in "Najot Talim" </CardPr>
-									<CardPr> Html, Scss, Javascript , Slick Js  </CardPr>
-                
-									<Cardbtn className='btn-view' id='btn_view'  >
-                  <a href="https://carrental-mk.netlify.app/" target="_blank" rel="noopener noreferrer" className='link_portfolio'>View</a>
-                  
-                  </Cardbtn>
+									<CardPr>
+										It was prepared in 12 hours in the competition held in
+										"Najot Talim"{' '}
+									</CardPr>
+									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://carrental-mk.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
+								</CardText>
+							</Card>
+							<Card className='card_portfolio'>
+								<CardImg src={myImg2} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
+								<CardText className='card_content'>
+									<CardTitle>Scoot</CardTitle>
+									<CardPr> Html, Scss, Bootstarpt </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://scoot-mk-02.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
 								</CardText>
 							</Card>
 						</CardBox>
