@@ -1,10 +1,4 @@
-import { TextAnimation } from "../../components/TextAnimation/TextAnimation"
-import './home.scss'
-
-
-export const Home = () => {
-
-  console.log("Bismillah");
+console.log("Bismillah");
 const canvas = document.getElementById("canvas");
 
 const ctx = canvas.getContext("2d");
@@ -92,14 +86,3 @@ window.addEventListener("mouseout", () => {
 });
 
 animate();
-
-  return (
-    <div>
-
-      <canvas id="canvas"></canvas>
-      <TextAnimation />
-    </div>
-  )
-}
-
-  
