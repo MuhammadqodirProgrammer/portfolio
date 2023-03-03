@@ -68,6 +68,8 @@ export const MyHeading = styled.h1`
 	line-height: 5rem;
 	position: relative;
     margin-top: 30px;
+	z-index: 10;
+
 	&::before {
 		content: '<h1>';
 		font-family: 'La Belle Aurore', cursive;
@@ -143,7 +145,7 @@ export const BtnContact = styled(Link)`
 	text-align: center;
 	text-decoration: none;
 margin-top: 65px;
-
+z-index: 999;
 `;
 
 export const BtnContactDiv = styled.div`

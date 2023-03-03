@@ -5,6 +5,7 @@ export const VerticalNav = styled.nav`
 	height: 100vh;
 	position: fixed;
 	background-color: #181818;
+	z-index: 999;
 `;
 export const NavList = styled.ul`
 	list-style: none;

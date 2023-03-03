@@ -33,6 +33,7 @@ export const TextAnimationBody = styled.div`
 export const TextAnimationHtml = styled.div`
 	position: relative;
     padding: 30px 0;
+	z-index: 999;
     &::before {
 		content: '<html>';
 		font-family: 'La Belle Aurore', cursive;
