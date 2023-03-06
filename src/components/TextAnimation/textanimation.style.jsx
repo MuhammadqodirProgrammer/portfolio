@@ -69,7 +69,7 @@ export const MyHeading = styled.h1`
 	position: relative;
     margin-top: 30px;
 	z-index: 10;
-
+width: 580px;
 	&::before {
 		content: '<h1>';
 		font-family: 'La Belle Aurore', cursive;

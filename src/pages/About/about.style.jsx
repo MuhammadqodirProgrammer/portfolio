@@ -90,7 +90,7 @@ export const MyHeading = styled.h2`
 
 	font-family: 'Lexend Deca', sans-serif;
 	font-weight: 400;
-	font-size: 3.5rem;
+	font-size: 4rem;
 	line-height: 5rem;
 	position: relative;
     margin-top: 30px;

@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import {
 	BtnContact,
@@ -16,10 +16,17 @@ import {
 	TextPr,
 } from './textanimation.style';
 import './animationtext.scss';
-import './text'
+import './text';
 export const TextAnimation = () => {
-
-
+	let mytextAll = "Hi,                         I'm Muhammadqodirweb developer";
+	const headingRef = useRef();
+	const [nameAll, setNameAll] = useState([]);
+	const [isHover, setIsHover] = useState(false);
+	const [index, setIndex] = useState();
+	useEffect(() => {
+		
+		setNameAll(mytextAll.split(''));
+	}, []);
 
 	const [text] = useTypewriter({
 		words: [
@@ -31,244 +38,50 @@ export const TextAnimation = () => {
 		typeSpeed: 120,
 		delaySpeed: 80,
 	});
+
 	return (
 		<TextAnimationBox classNameName=' text-white'>
-		<TextAnimationHtml>
-
-			<TextAnimationBody>
-			
-				{/* <SimpledivFlex> */}
+			<TextAnimationHtml>
+				<TextAnimationBody>
+					{/* <SimpledivFlex> */}
 					<Simplediv>
 						<MyHeading
-							aria-label=' Hi,  I’m  ack,  web developer'
+							ref={headingRef}
+							aria-label=' Hi,  I’m  Muhammadqodir,  web developer'
 							className='blast-root'
 						>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								H
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								i
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								,
-							</span>{' '}
-							<br />
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								I
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								’
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								m
-							</span>
-							<span
-								className='blast ms-3'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								M
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								u
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								h
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								a
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								m
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								m
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								a
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								d
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								Q
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								o
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								d
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								i
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								r
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								,
-							</span>
-							<br />
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								w
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								e
-							</span>
-							<span
-								className='blast me-3'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								b
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								d
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								e
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								v
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								e
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								l
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								o
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								p
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								e
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								r
-							</span>
+							{nameAll?.map((t, i) => {
+								return (
+									<>
+										<span
+											style={
+												t === ' '
+													? { display: 'inline-block', marginRight: '20px' }
+													: t === '  '
+													? { display: 'block' }
+													: { display: 'inline-block', marginRight: '0' }
+											}
+											className={isHover && i == index ? 'onHover' : 'notHover'}
+											onMouseEnter={() => {
+												setIndex(i);
+												if (isHover || index) {
+													setIsHover(true);
+												}
+												
+											}}
+											onMouseOut={() => {
+												setIsHover(false);
+												
+											}}
+											about={i}
+											key={i + 1}
+										>
+											{t}
+										</span>
+									</>
+								);
+							})}
+						
 						</MyHeading>
 						<TextPr>
 							<span style={{}}>{text}</span>
@@ -287,9 +100,9 @@ export const TextAnimation = () => {
 					</Simplediv>
 
 					{/* <MyPoto></MyPoto> */}
-				{/* </SimpledivFlex> */}
-			</TextAnimationBody>
-		</TextAnimationHtml>
+					{/* </SimpledivFlex> */}
+				</TextAnimationBody>
+			</TextAnimationHtml>
 		</TextAnimationBox>
 	);
 };

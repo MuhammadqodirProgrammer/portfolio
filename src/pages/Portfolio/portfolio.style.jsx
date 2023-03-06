@@ -58,7 +58,7 @@ export const MyHeading = styled.h2`
 
 	font-family: 'Lexend Deca', sans-serif;
 	font-weight: 400;
-	font-size: 3.5rem;
+	font-size: 4rem;
 	line-height: 5rem;
 	position: relative;
 	margin-top: 30px;
@@ -97,7 +97,11 @@ export const MyHeading = styled.h2`
 		margin-top: 30px;
 	}
 `;
-export const PortfolioBox = styled.div``;
+export const PortfolioBox = styled.div`
+position: relative;
+max-height:700px;
+margin-top: 30px;
+`;
 export const CardBox = styled.div`
 	display: flex;
 	flex-wrap: wrap;

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
 	BtnContact,
 	BtnContactDiv,
@@ -29,6 +29,15 @@ const nameRef = useRef();
 const emailRef = useRef();
 const subjectRef = useRef();
 const textareaRef = useRef();
+let mytextAll = "Contact me";
+const [nameAll, setNameAll] = useState([]);
+const [isHover, setIsHover] = useState(false);
+const [index, setIndex] = useState();
+useEffect(() => {
+	
+	setNameAll(mytextAll.split(''));
+}, []);
+
   const handleSubmit =(evt)=>{
 
 evt.preventDefault()
@@ -38,6 +47,7 @@ console.log({
   subject:subjectRef.current.value,
   message:textareaRef.current.value,
 });
+
   }
 	return (
 		<TextAnimationBox className=' text-white'>
@@ -46,69 +56,37 @@ console.log({
 					<SimpledivFlex>
 						<Simplediv>
 							<MyHeading aria-label='About Me' className='blast-root'>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									C
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									o
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									n
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									t
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									a
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									c
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									t
-								</span>{' '}
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									M
-								</span>
-								<span
-									className='blast'
-									aria-hidden='true'
-									style={{ opacity: '1' }}
-								>
-									e
-								</span>
+							{nameAll?.map((t, i) => {
+								return (
+									<>
+										<span
+											style={
+												t === ' '
+													? { display: 'inline-block', marginRight: '20px' }
+													: t === '  '
+													? { display: 'block' }
+													: { display: 'inline-block', marginRight: '0' }
+											}
+											className={isHover && i == index ? 'onHover' : 'notHover'}
+											onMouseEnter={() => {
+												setIndex(i);
+												if (isHover || index) {
+													setIsHover(true);
+												}
+												
+											}}
+											onMouseOut={() => {
+												setIsHover(false);
+												
+											}}
+											about={i}
+											key={i + 1}
+										>
+											{t}
+										</span>
+									</>
+								);
+							})}
 							</MyHeading>
 						
 							<ContactFormDiv>

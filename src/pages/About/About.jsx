@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	BtnContact,
 	BtnContactDiv,
@@ -18,7 +18,14 @@ import {
 import '../../components/TextAnimation/animationtext.scss';
 import '../../components/TextAnimation/text.js';
 export const About = () => {
-
+	let mytextAll = "About me";
+	const [nameAll, setNameAll] = useState([]);
+	const [isHover, setIsHover] = useState(false);
+	const [index, setIndex] = useState();
+	useEffect(() => {
+		
+		setNameAll(mytextAll.split(''));
+	}, []);
 	return (
 		<TextAnimationBox classNameName=' text-white'>
         <TextAnimationHtml>
@@ -27,55 +34,37 @@ export const About = () => {
 				<SimpledivFlex>
 					<Simplediv>
 						<MyHeading aria-label='About Me' className='blast-root'>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								A
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								b
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								o
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								u
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								t
-							</span>{' '}
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								M
-							</span>
-							<span
-								className='blast'
-								aria-hidden='true'
-								style={{ opacity: '1' }}
-							>
-								e
-							</span>
+						{nameAll?.map((t, i) => {
+								return (
+									<>
+										<span
+											style={
+												t === ' '
+													? { display: 'inline-block', marginRight: '20px' }
+													: t === '  '
+													? { display: 'block' }
+													: { display: 'inline-block', marginRight: '0' }
+											}
+											className={isHover && i == index ? 'onHover' : 'notHover'}
+											onMouseEnter={() => {
+												setIndex(i);
+												if (isHover || index) {
+													setIsHover(true);
+												}
+												
+											}}
+											onMouseOut={() => {
+												setIsHover(false);
+												
+											}}
+											about={i}
+											key={i + 1}
+										>
+											{t}
+										</span>
+									</>
+								);
+							})}
 						</MyHeading>
 						<TextPr>
                         I am Muhammadqodir Komilov .  I like to learn more about the programming, challenges that take me out of my comfort zone are the best. As I am Front-end developer I focused on creating Web and Mobile applications. I really like different projects that solve real problems.
