@@ -15,8 +15,8 @@
 .card_portfolio {
     border-radius: 10px;
     // flex: 1 1 20%;
-    height: 500px;
-    max-width:380px;
+    height: 400px;
+    max-width:320px;
     overflow: hidden;
     position: relative;
 
@@ -40,7 +40,7 @@
         }
 
         .btn-view {
-            // transition-delay: display 5s;
+            
             z-index: 999;
             display: block;
             

@@ -17,6 +17,10 @@ import myImg from '../../assets/images/foodapp2.jpg';
 import myImg2 from '../../assets/images/scootimg.jpg';
 import myImg3 from '../../assets/images/CarRental.jpg';
 import myImg4 from '../../assets/images/inwood.jpg';
+import myImg5 from '../../assets/images/babaev.jpg';
+import myImg6 from '../../assets/images/globalvisa1.jpg';
+import myImg7 from '../../assets/images/najottalim.jpg';
+import myImg8 from '../../assets/images/globalvisa2.jpg';
 import '../../components/TextAnimation/animationtext.scss';
 import '../../components/TextAnimation/text.js';
 import './portfolio.scss';
@@ -72,8 +76,8 @@ useEffect(() => {
 							})}
 					</MyHeading>
 
-<Carousel />
-					{/* <PortfolioBox>
+{/* <Carousel /> */}
+					<PortfolioBox>
 						<CardBox>
 							<Card className='card_portfolio'>
 								<CardImg src={myImg} alt='card-img' />
@@ -104,6 +108,9 @@ useEffect(() => {
 								</div>
 								<CardText className='card_content'>
 									<CardTitle>Inwood</CardTitle>
+									<CardPr>
+									It was prepared  by team  in a competition held in 11 hours 
+									</CardPr>
 									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
 
 									<Cardbtn className='btn-view' id='btn_view'>
@@ -126,14 +133,76 @@ useEffect(() => {
 								<CardText className='card_content'>
 									<CardTitle>CarRental</CardTitle>
 									<CardPr>
-										It was prepared in 12 hours in the competition held in
-										"Najot Talim"{' '}
+									It was prepared  by team  in a competition held in 11 hours 
 									</CardPr>
 									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
 
 									<Cardbtn className='btn-view' id='btn_view'>
 										<a
 											href='https://carrental-mk.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
+								</CardText>
+							</Card>
+							<Card className='card_portfolio'>
+								<CardImg src={myImg5} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
+								<CardText className='card_content'>
+									<CardTitle>Babaev Portfolio</CardTitle>
+									<CardPr> React , Styled component,Slick js   </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://babaev.uz/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
+								</CardText>
+							</Card>
+							<Card className='card_portfolio'>
+								<CardImg src={myImg7} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
+								<CardText className='card_content'>
+									<CardTitle>Najot Ta'lim </CardTitle>
+									<CardPr> Html, Scss, Javascript ,Slick js </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://najottalim-uz.netlify.app/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='link_portfolio'
+										>
+											View
+										</a>
+									</Cardbtn>
+								</CardText>
+							</Card>
+							<Card className='card_portfolio'>
+								<CardImg src={myImg6} alt='card-img' />
+								<div className='active_div' id='active_card'>
+									{' '}
+								</div>
+								<CardText className='card_content'>
+									<CardTitle>Global Visa</CardTitle>
+									<CardPr> Html, Scss, Javascript ,Slick js </CardPr>
+
+									<Cardbtn className='btn-view' id='btn_view'>
+										<a
+											href='https://global-visa.netlify.app/'
 											target='_blank'
 											rel='noopener noreferrer'
 											className='link_portfolio'
@@ -165,7 +234,7 @@ useEffect(() => {
 								</CardText>
 							</Card>
 						</CardBox>
-					</PortfolioBox> */}
+					</PortfolioBox>
 				</TextAnimationBody>
 			</TextAnimationHtml>
 		</TextAnimationBox>

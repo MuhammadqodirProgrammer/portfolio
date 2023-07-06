@@ -99,12 +99,13 @@ export const MyHeading = styled.h2`
 `;
 export const PortfolioBox = styled.div`
 position: relative;
-max-height:700px;
+max-height:auto;
 margin-top: 30px;
 `;
 export const CardBox = styled.div`
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	gap: 15px;
 	padding-bottom: 10px;
     margin-top: 30px;

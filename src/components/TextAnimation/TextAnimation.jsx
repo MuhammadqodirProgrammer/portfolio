@@ -99,8 +99,7 @@ export const TextAnimation = () => {
 						</BtnContact>
 					</Simplediv>
 
-					{/* <MyPoto></MyPoto> */}
-					{/* </SimpledivFlex> */}
+				
 				</TextAnimationBody>
 			</TextAnimationHtml>
 		</TextAnimationBox>

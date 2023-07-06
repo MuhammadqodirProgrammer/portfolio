@@ -117,6 +117,7 @@ padding-right: 50px;
 border-radius: 50% 50% 5px 5px ;
 
 `
+
 export const Simplediv =styled.div`
 
 

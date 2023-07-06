@@ -135,6 +135,14 @@ export const MyPoto = styled.div`
 	height: 98vh;
 	z-index: 999;
 `;
+export const Simplediv2 = styled.div`
+	/* position: absolute; */
+	/* top: 5px; */
+	right: 0;
+	width: 48vw;
+	height: 98vh;
+	z-index: 999;
+`;
 export const Simplediv = styled.div``;
 export const SimpledivFlex = styled.div`
 	display: flex;
