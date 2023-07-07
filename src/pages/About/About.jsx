@@ -16,7 +16,6 @@ import {
 	TextPr,
 } from './about.style.jsx';
 import '../../components/TextAnimation/animationtext.scss';
-import '../../components/TextAnimation/text.js';
 export const About = () => {
 	let mytextAll = "About me";
 	const [nameAll, setNameAll] = useState([]);

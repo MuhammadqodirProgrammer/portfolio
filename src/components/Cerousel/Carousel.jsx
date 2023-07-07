@@ -60,16 +60,7 @@ export default class Carousel extends Component {
               }
             }]
       };
-      
-    // render() {
-    //     const settings = {
-    //       className: "center",
-    //       centerMode: true,
-    //       infinite: true,
-    //       centerPadding: "60px",
-    //       slidesToShow: 3,
-    //       speed: 500
-    //     };
+
       return (
         <PortfolioBox  >
           

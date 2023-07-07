@@ -22,7 +22,6 @@ import myImg6 from '../../assets/images/globalvisa1.jpg';
 import myImg7 from '../../assets/images/najottalim.jpg';
 import myImg8 from '../../assets/images/globalvisa2.jpg';
 import '../../components/TextAnimation/animationtext.scss';
-import '../../components/TextAnimation/text.js';
 import './portfolio.scss';
 import Carousel from '../../components/Cerousel/Carousel';
 export const Portfolio = () => {

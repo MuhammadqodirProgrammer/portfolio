@@ -24,7 +24,6 @@ import {
 	TextPr,
 } from './contact.style.jsx';
 import '../../components/TextAnimation/animationtext.scss';
-import '../../components/TextAnimation/text.js';
 export const Contact = () => {
 	const nameRef = useRef();
 	const phoneRef = useRef();

@@ -16,7 +16,6 @@ import {
 	TextPr,
 } from './textanimation.style';
 import './animationtext.scss';
-import './text';
 export const TextAnimation = () => {
 	let mytextAll = "Hi,                         I'm Muhammadqodirweb developer";
 	const headingRef = useRef();
