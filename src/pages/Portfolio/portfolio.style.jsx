@@ -105,7 +105,7 @@ margin-top: 30px;
 export const CardBox = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	gap: 15px;
 	padding-bottom: 10px;
     margin-top: 30px;

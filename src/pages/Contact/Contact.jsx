@@ -89,6 +89,7 @@ export const Contact = () => {
 									return (
 										<>
 											<span
+												key={i}
 												style={
 													t === ' '
 														? { display: 'inline-block', marginRight: '20px' }

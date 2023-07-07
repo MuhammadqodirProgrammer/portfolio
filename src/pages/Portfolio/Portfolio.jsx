@@ -24,16 +24,15 @@ import myImg8 from '../../assets/images/globalvisa2.jpg';
 import '../../components/TextAnimation/animationtext.scss';
 import '../../components/TextAnimation/text.js';
 import './portfolio.scss';
-import  Carousel  from '../../components/Cerousel/Carousel';
+import Carousel from '../../components/Cerousel/Carousel';
 export const Portfolio = () => {
-	let mytextAll = "Portfolio";
-const [nameAll, setNameAll] = useState([]);
-const [isHover, setIsHover] = useState(false);
-const [index, setIndex] = useState();
-useEffect(() => {
-	
-	setNameAll(mytextAll.split(''));
-}, []);
+	let mytextAll = 'Portfolio';
+	const [nameAll, setNameAll] = useState([]);
+	const [isHover, setIsHover] = useState(false);
+	const [index, setIndex] = useState();
+	useEffect(() => {
+		setNameAll(mytextAll.split(''));
+	}, []);
 	return (
 		<TextAnimationBox className=' text-white'>
 			<TextAnimationHtml>
@@ -42,41 +41,36 @@ useEffect(() => {
 						aria-label=' Hi,  I’m  ack,  web developer'
 						className='blast-root'
 					>
-					{nameAll?.map((t, i) => {
-								return (
-									<>
-										<span
-										key={i }
-											style={
-												t === ' '
-													? { display: 'inline-block', marginRight: '20px' }
-													: t === '  '
-													? { display: 'block' }
-													: { display: 'inline-block', marginRight: '0' }
-											}
-											className={isHover && i == index ? 'onHover' : 'notHover'}
-											onMouseEnter={() => {
-												setIndex(i);
-												if (isHover || index) {
-													setIsHover(true);
-												}
-												
-											}}
-											onMouseOut={() => {
-												setIsHover(false);
-												
-											}}
-											about={i}
-											
-										>
-											{t}
-										</span>
-									</>
-								);
-							})}
+						{nameAll?.map((t, i) => {
+							return (
+								<span
+									key={i}
+									style={
+										t === ' '
+											? { display: 'inline-block', marginRight: '20px' }
+											: t === '  '
+											? { display: 'block' }
+											: { display: 'inline-block', marginRight: '0' }
+									}
+									className={isHover && i == index ? 'onHover' : 'notHover'}
+									onMouseEnter={() => {
+										setIndex(i);
+										if (isHover || index) {
+											setIsHover(true);
+										}
+									}}
+									onMouseOut={() => {
+										setIsHover(false);
+									}}
+									about={i}
+								>
+									{t}
+								</span>
+							);
+						})}
 					</MyHeading>
 
-{/* <Carousel /> */}
+					{/* <Carousel /> */}
 					<PortfolioBox>
 						<CardBox>
 							<Card className='card_portfolio'>
@@ -109,7 +103,7 @@ useEffect(() => {
 								<CardText className='card_content'>
 									<CardTitle>Inwood</CardTitle>
 									<CardPr>
-									It was prepared  by team  in a competition held in 11 hours 
+										It was prepared by team in a competition held in 11 hours
 									</CardPr>
 									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
 
@@ -133,7 +127,7 @@ useEffect(() => {
 								<CardText className='card_content'>
 									<CardTitle>CarRental</CardTitle>
 									<CardPr>
-									It was prepared  by team  in a competition held in 11 hours 
+										It was prepared by team in a competition held in 11 hours
 									</CardPr>
 									<CardPr> Html, Scss, Javascript , Slick Js </CardPr>
 
@@ -156,7 +150,7 @@ useEffect(() => {
 								</div>
 								<CardText className='card_content'>
 									<CardTitle>Babaev Portfolio</CardTitle>
-									<CardPr> React , Styled component,Slick js   </CardPr>
+									<CardPr> React , Styled component,Slick js </CardPr>
 
 									<Cardbtn className='btn-view' id='btn_view'>
 										<a
